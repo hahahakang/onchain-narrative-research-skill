@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+*.tmp
+*.csv
+*.xlsx
+rpc_cache/
+outputs/
+node_modules/
+.env

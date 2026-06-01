@@ -1,0 +1,7 @@
+interface:
+  display_name: "Onchain Narrative Research"
+  short_description: "Verify crypto leads and trace narratives"
+  default_prompt: "Use $onchain-narrative-research to investigate this crypto lead, verify onchain behavior, trace the narrative source, and produce a reusable research report."
+
+policy:
+  allow_implicit_invocation: true
