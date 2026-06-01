@@ -2,7 +2,9 @@
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-A Codex skill for turning crypto screenshots, wallets, tokens, posts, people, companies, and project narratives into clear onchain research.
+An AI coding agent skill for turning crypto screenshots, wallets, tokens, posts, people, companies, and project narratives into clear onchain research.
+
+Works with any AI coding agent that supports skill/instruction files, including Claude Code, Codex CLI, Cursor, Windsurf, Cline, and similar tools.
 
 It helps answer practical questions:
 
@@ -46,7 +48,17 @@ Example report:
 
 ## Installation
 
-Clone this repo and copy the skill folder into your Codex skills directory:
+### Let Your Agent Install It
+
+Paste this to your AI coding agent:
+
+```text
+Clone https://github.com/hahahakang/onchain-narrative-research-skill and install it as a reusable skill/instruction file.
+```
+
+The agent can copy or symlink `onchain-narrative-research/SKILL.md` into the right skill/instruction directory for your environment.
+
+### Codex / Codex CLI
 
 ```bash
 git clone https://github.com/hahahakang/onchain-narrative-research-skill.git
@@ -55,6 +67,34 @@ cp -R onchain-narrative-research-skill/onchain-narrative-research ~/.codex/skill
 ```
 
 Then restart Codex.
+
+### Claude Code
+
+Clone the skill into your Claude skills directory:
+
+```bash
+git clone https://github.com/hahahakang/onchain-narrative-research-skill.git ~/.claude/skills/onchain-narrative-research-skill
+```
+
+Then reference or invoke the skill in your Claude Code workflow.
+
+### Cursor
+
+Use the skill as a Cursor rule:
+
+1. Create a rule file such as `.cursor/rules/onchain-narrative-research.mdc`.
+2. Paste the contents of `onchain-narrative-research/SKILL.md`.
+3. Add the reference files when your workflow needs deeper guidance.
+
+### Windsurf / Cline / Other Agents
+
+If your agent supports custom instructions, rules, or skill files, add the contents of:
+
+```text
+onchain-narrative-research/SKILL.md
+```
+
+Keep the `references/` folder nearby so the agent can load the detailed workflow guides when needed.
 
 ## Example Prompts
 

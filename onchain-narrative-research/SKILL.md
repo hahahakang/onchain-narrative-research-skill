@@ -1,6 +1,6 @@
 ---
 name: onchain-narrative-research
-description: Investigate crypto alpha leads from screenshots, wallets, token addresses, X posts, Telegram/Discord snippets, founders, companies, projects, or viral narratives. Use when Codex needs to verify claimed trading profits, reconstruct onchain behavior, trace narrative/source timelines, identify early token/category leaders, build repeatable research reports, or turn discovered patterns into bot-ready signal rules.
+description: Investigate crypto leads from screenshots, wallets, token addresses, X posts, Telegram/Discord snippets, founders, companies, projects, or viral narratives. Use when an AI coding agent needs to verify claimed trading profits, reconstruct onchain behavior, trace narrative/source timelines, identify early token/category leaders, build repeatable research reports, or turn discovered patterns into alert or bot-ready signal rules.
 ---
 
 # Onchain Narrative Research

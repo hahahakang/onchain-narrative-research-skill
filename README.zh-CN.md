@@ -2,7 +2,9 @@
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-一个用于 Codex 的加密链上研究 skill。它帮助你把「晒单截图、钱包地址、代币、推文、公司/人物线索、项目叙事」整理成可检查的链上研究。
+一个用于 AI 编码代理的加密链上研究 skill / instruction package。它帮助你把「晒单截图、钱包地址、代币、推文、公司/人物线索、项目叙事」整理成可检查的链上研究。
+
+可与任何支持 skill / instruction files（技能/指令文件）的 AI 编码代理配合使用，包括 Claude Code、Codex CLI、Cursor、Windsurf、Cline 等。
 
 它主要回答这些实际问题：
 
@@ -46,7 +48,17 @@
 
 ## 安装
 
-Clone 这个仓库，并把 skill 文件夹复制到 Codex skills 目录：
+### 让你的 AI 代理安装
+
+把下面这句话发给你的 AI 编码代理：
+
+```text
+Clone https://github.com/hahahakang/onchain-narrative-research-skill，并把它安装成一个可复用的 skill / instruction file。
+```
+
+代理可以根据当前工具环境，把 `onchain-narrative-research/SKILL.md` 复制或软链接到对应的技能/指令目录。
+
+### Codex / Codex CLI
 
 ```bash
 git clone https://github.com/hahahakang/onchain-narrative-research-skill.git
@@ -55,6 +67,34 @@ cp -R onchain-narrative-research-skill/onchain-narrative-research ~/.codex/skill
 ```
 
 然后重启 Codex。
+
+### Claude Code
+
+把 skill clone 到 Claude skills 目录：
+
+```bash
+git clone https://github.com/hahahakang/onchain-narrative-research-skill.git ~/.claude/skills/onchain-narrative-research-skill
+```
+
+然后在 Claude Code 工作流中引用或调用这个 skill。
+
+### Cursor
+
+把它作为 Cursor rule 使用：
+
+1. 创建规则文件，例如 `.cursor/rules/onchain-narrative-research.mdc`。
+2. 粘贴 `onchain-narrative-research/SKILL.md` 的内容。
+3. 如果需要更完整的方法论，把 `references/` 里的文件也放在附近，方便代理读取。
+
+### Windsurf / Cline / 其他代理
+
+如果你的代理支持 custom instructions、rules 或 skill files，把下面这个文件的内容加入对应位置：
+
+```text
+onchain-narrative-research/SKILL.md
+```
+
+建议同时保留 `references/` 文件夹，方便代理在需要时读取更详细的流程。
 
 ## 使用示例
 
